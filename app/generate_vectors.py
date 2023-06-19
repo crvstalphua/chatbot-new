@@ -19,7 +19,6 @@ from constants import (
     PINECONE_API_KEY
 )
 
-
 embeddings = OpenAIEmbeddings(
     openai_api_key=OPENAI_API_KEY
 )
@@ -84,10 +83,14 @@ if __name__ == "__main__":
         api_key=PINECONE_API_KEY,
         environment=PINECONE_API_ENV
     )
-    # create_index()
+    
+    #create_index()
+    print(OPENAI_API_KEY)
+
     create_vectors(
         embeddings,
         INDEX_NAME,
         namespace,
         pdf_path
     )
+    
